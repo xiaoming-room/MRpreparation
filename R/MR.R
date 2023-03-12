@@ -7,11 +7,12 @@
 #'
 #' @examples
 install_MR_dependece <- function(){
+  install.packages('rlang')
   if (!require("devtools", quietly = TRUE))
     install.packages("devtools")
+  if (!require("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 
-    options(BioC_mirror="https://mirrors.tuna.tsinghua.edu.cn/bioconductor/")
 
   packages <- c('do',"tidyverse","locfdr","fdrtool","RColorBrewer","reshape2","hash",
                 "purrr","combinat","tidyverse","LDlinkR","data.table","scales",
